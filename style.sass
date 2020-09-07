@@ -106,7 +106,7 @@ header
 
 // shorten section styles
 .shorten
-	background: lighten($Gray, 22%)
+	background: lighten($Gray, 18%)
 	.inner
 		padding: 3.5rem
 		background: url('images/bg-shorten-desktop.svg') no-repeat center/ cover
@@ -159,9 +159,9 @@ header
 		line-height: 1.7rem
 
 	.cards
-		padding-top: 7rem
+		padding: 9rem 0 8rem
 		display: grid
-		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
+		grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr))
 		grid-gap: 3rem 2rem
 
 		.card
@@ -169,14 +169,47 @@ header
 			background: white
 			border-radius: 7px
 			padding: 2rem
+			position: relative
+
+			h4
+				margin: 2.5rem 0 1rem
+				font-size: 1.3rem
 
 			p
 				letter-spacing: 0
-				font-size: 1rem
+				font-size: .95rem
 				max-width: 100%
 
+			.img-wrapper
+				background: $Very-Dark-Blue
+				width: 5.5rem
+				height: 5.5rem
+				border-radius: 50%
+				position: absolute
+				top: -3rem
 		.top
-			margin-top: -2.5rem
+			margin: -2.5rem 0 2.5rem
 
 		.bottom
-			margin-top: 2.5rem
+			margin: 2.5rem 0 -2.5rem
+
+		.middle
+			position: relative
+
+			&::before
+				content: ""
+				background: $Cyan
+				width: 2rem
+				height: 8px
+				position: absolute
+				left: -32px
+				top: 100px
+
+			&::after
+				content: ""
+				background: $Cyan
+				width: 2rem
+				height: 8px
+				position: absolute
+				right: -32px
+				top: 100px
