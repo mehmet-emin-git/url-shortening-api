@@ -39,15 +39,17 @@ img
 	max-width: 100%
 
 .btn
+	font-family: 'Poppins', sans-serif
 	padding: .4rem 1.4rem
 	border: none
+	letter-spacing: .5px
 	border-radius: 30px
 	background: $Cyan
 	color: #fff
 	cursor: pointer
 
 .btn-big
-	padding: 1rem 3rem
+	padding: .9rem 2.4rem
 	font-size: 1.2rem
 	font-weight: 700
 
@@ -70,12 +72,12 @@ header
 				color: white
 				font-size: .9rem
 
-// hero styles
+// hero section styles
 .hero
 	margin: 0 0 5rem
 	overflow-X: hidden
 	margin-top: -3rem
-	height: 38rem
+	height: 40rem
 
 	.flex
 		justify-content: space-between
@@ -95,8 +97,86 @@ header
 			line-height: 1.7em
 			letter-spacing: .5px
 			margin: 0 0 3rem
+
 	.image
 		position: relative
 		left: 9rem
-		top: 4rem
+		top: 2rem
 		transform: scale(1.6)
+
+// shorten section styles
+.shorten
+	background: lighten($Gray, 22%)
+	.inner
+		padding: 3.5rem
+		background: url('images/bg-shorten-desktop.svg') no-repeat center/ cover
+		background-color: $Dark-Violet
+		border-radius: 10px
+		position: relative
+		top: -5rem
+
+		form
+			justify-content: space-between
+			.input
+				width: 78%
+
+				input
+					width: 100%
+					border: none
+					border-radius: 10px
+					padding: 1.5rem 2rem
+
+					&::placeholder
+						font-size: 1.2rem
+						color: $Grayish-Violet
+						font-weight: 500
+						font-family: 'Poppins', sans-serif
+
+			button
+				@extend .btn-big
+				border: none
+				background: $Cyan
+				color: white
+				font-weight: 700
+				font-size: 1.2rem
+				letter-spacing: .5px
+				padding: 1.3rem 3rem
+				border-radius: 10px
+
+// statistics section styles
+.statistics
+	text-align: center
+	h2
+		font-size: 2.4rem
+		margin-bottom: 1rem
+	p
+		margin-top: 0
+		color: $Grayish-Violet
+		letter-spacing: .5px
+		font-size: 1.1rem
+		max-width: 48%
+		margin: 0 auto
+		line-height: 1.7rem
+
+	.cards
+		padding-top: 7rem
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
+		grid-gap: 3rem 2rem
+
+		.card
+			text-align: left
+			background: white
+			border-radius: 7px
+			padding: 2rem
+
+			p
+				letter-spacing: 0
+				font-size: 1rem
+				max-width: 100%
+
+		.top
+			margin-top: -2.5rem
+
+		.bottom
+			margin-top: 2.5rem
