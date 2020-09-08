@@ -45,13 +45,22 @@ img
 	letter-spacing: .5px
 	border-radius: 30px
 	background: $Cyan
+	outline: none
 	color: #fff
 	cursor: pointer
+	transition: .2s ease-out background
+	&:hover
+		background: lighten($Cyan,10%)
 
 .btn-big
 	padding: .9rem 2.4rem
 	font-size: 1.2rem
 	font-weight: 700
+	outline: none
+	transition: .2s ease-out background
+
+	&:hover
+		background: lighten($Cyan,10%)
 
 // ---------------------- content styles -------------------------- 
 // header styles
@@ -66,6 +75,10 @@ header
 				color: $Grayish-Violet
 				font-weight: 700
 				font-size: .95rem
+				transition: .2s ease-out color
+				&:hover
+					color: $Very-Dark-Blue
+
 		&__link.btn
 			margin-left: 2rem
 			a
@@ -123,8 +136,10 @@ header
 				input
 					width: 100%
 					border: none
+					outline: none
 					border-radius: 10px
 					padding: 1.5rem 2rem
+					font-size: 1.2rem
 
 					&::placeholder
 						font-size: 1.2rem
@@ -140,8 +155,9 @@ header
 				font-weight: 700
 				font-size: 1.2rem
 				letter-spacing: .5px
-				padding: 1.3rem 3rem
+				padding: 1.5rem 3rem
 				border-radius: 10px
+				cursor: pointer
 
 // statistics section styles
 .statistics
@@ -213,3 +229,59 @@ header
 				position: absolute
 				right: -32px
 				top: 100px
+
+// cta section styles
+.cta
+	background: url('images/bg-boost-desktop.svg') no-repeat center / cover
+	background-color: $Dark-Violet
+	text-align: center
+	padding: 4rem 1rem
+	color: white
+
+	h2
+		font-size: 2.4rem
+		letter-spacing: -1px
+		margin-top: 0
+
+	a
+		display: inline-block
+
+// footer styles
+footer
+	background: $Very-Dark-Violet
+	color: white
+	padding: 4rem 1rem
+	.flex
+		justify-content: space-between
+		align-items: flex-start
+
+	ul
+		margin-left: 5.5rem
+		margin-top: 0
+
+		li
+			a
+				display: inline-block
+				color: $Grayish-Violet
+				padding-top: .5rem
+				transition: .15s ease-out color
+				&:hover
+					color: $Cyan
+
+		.heading
+			margin-bottom: .8rem
+			a
+				color: white
+				padding-top: 0
+				&:hover
+					color: white
+
+	.social__links
+		.social__link
+			transition: .15s ease-out all
+
+			&:hover
+				filter: invert(0.4) sepia(1) saturate(6) hue-rotate(122.4deg) brightness(0.91)
+
+		a:not(:first-child)
+			padding-left: 1.3rem
